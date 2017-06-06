@@ -21,11 +21,11 @@ gulp.task('js', function () {
 });
 
 // Task 3 - Optimise images
-// gulp.task('imagemin', function () {
-//     gulp.src('./assets/images/*')
-//         .pipe(imagemin())
-//         .pipe(gulp.dest('./assets/images'))
-// });
+gulp.task('imagemin', function () {
+    gulp.src('./assets/images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./assets/images'))
+});
 
 // Task 4 - Set up Browsersync
 
@@ -47,4 +47,4 @@ gulp.task('watch', function() {
 });
 
 // Default Gulp tasks
-gulp.task('default', ['sass', 'js', 'browser-sync', 'watch' ]);
+gulp.task('default', ['sass', 'js', 'imagemin', 'browser-sync', 'watch' ]);
